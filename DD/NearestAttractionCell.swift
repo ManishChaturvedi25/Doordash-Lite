@@ -12,11 +12,14 @@ class NearestAttractionCell: UITableViewCell {
 
     @IBOutlet weak var storeImageView: UIImageView!
     
-    @IBOutlet weak var stoeNameLabel: UILabel!
+    @IBOutlet weak var storeNameLabel: UILabel!
+    
+    @IBOutlet weak var specialityLabel: UILabel!
+
+    @IBOutlet weak var deliveryTypeLabel: UILabel!
     
     static let reuseIdentified = "NearestAttraction"
 
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

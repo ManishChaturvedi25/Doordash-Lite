@@ -48,10 +48,16 @@ class SearchResultsTableViewController: UIViewController, UITableViewDelegate {
         self.dismiss(animated: true, completion: nil)
 
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80.00
+    }
+    
 }
 
 extension SearchResultsTableViewController : UISearchResultsUpdating {
     
+    // TODO : Handle search here.
     func updateSearchResults(for searchController: UISearchController) {
         
 
