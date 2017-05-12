@@ -24,8 +24,9 @@ class SearchResultsDataSource: NSObject , UITableViewDataSource{
         
         let nearestAttractionCell = tableView.dequeueReusableCell(withIdentifier:NearestAttractionCell.reuseIdentified, for: indexPath) as! NearestAttractionCell
         
-//        nearestAttractionCell.attractionNameLabel.text = "Indian Chat House"
         nearestAttractionCell.storeNameLabel.text = "Curry Up Now"
+        nearestAttractionCell.specialityLabel.text = "Thai"
+        nearestAttractionCell.deliveryTypeLabel.text = "Free!"
 
 
         return nearestAttractionCell
