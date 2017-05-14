@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		970F13D01EC81A4A00CAFC87 /* JSONDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970F13CF1EC81A4A00CAFC87 /* JSONDownloader.swift */; };
+		970F13D21EC81AFD00CAFC87 /* DoorDashError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970F13D11EC81AFD00CAFC87 /* DoorDashError.swift */; };
+		970F13D41EC820D900CAFC87 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970F13D31EC820D900CAFC87 /* Restaurant.swift */; };
+		970F13D61EC8346600CAFC87 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970F13D51EC8346600CAFC87 /* Menu.swift */; };
+		970F13D81EC83EDE00CAFC87 /* DoorDashAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970F13D71EC83EDE00CAFC87 /* DoorDashAPIClient.swift */; };
 		979E33CD1EC2BA3E00D66DD3 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E33CC1EC2BA3E00D66DD3 /* SearchResultsTableViewController.swift */; };
 		979E33D21EC2F62A00D66DD3 /* NearestAttractionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E33D11EC2F62A00D66DD3 /* NearestAttractionCell.swift */; };
 		979E33D51EC2F9BD00D66DD3 /* SearchResultsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E33D41EC2F9BD00D66DD3 /* SearchResultsDataSource.swift */; };
@@ -35,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		970F13CF1EC81A4A00CAFC87 /* JSONDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDownloader.swift; sourceTree = "<group>"; };
+		970F13D11EC81AFD00CAFC87 /* DoorDashError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorDashError.swift; sourceTree = "<group>"; };
+		970F13D31EC820D900CAFC87 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		970F13D51EC8346600CAFC87 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		970F13D71EC83EDE00CAFC87 /* DoorDashAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorDashAPIClient.swift; sourceTree = "<group>"; };
 		979E33CC1EC2BA3E00D66DD3 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		979E33D11EC2F62A00D66DD3 /* NearestAttractionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearestAttractionCell.swift; sourceTree = "<group>"; };
 		979E33D41EC2F9BD00D66DD3 /* SearchResultsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsDataSource.swift; sourceTree = "<group>"; };
@@ -75,6 +85,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		970F13CE1EC819F900CAFC87 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				970F13CF1EC81A4A00CAFC87 /* JSONDownloader.swift */,
+				970F13D11EC81AFD00CAFC87 /* DoorDashError.swift */,
+				970F13D71EC83EDE00CAFC87 /* DoorDashAPIClient.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		979E33CB1EC2B9C000D66DD3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +118,8 @@
 		979E33CF1EC2F53200D66DD3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				970F13D31EC820D900CAFC87 /* Restaurant.swift */,
+				970F13D51EC8346600CAFC87 /* Menu.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -140,6 +162,7 @@
 		97A898281EC1642200195136 /* DD */ = {
 			isa = PBXGroup;
 			children = (
+				970F13CE1EC819F900CAFC87 /* Networking */,
 				979E33D31EC2F8E500D66DD3 /* Data Source */,
 				979E33D01EC2F54F00D66DD3 /* ViewModels */,
 				979E33CF1EC2F53200D66DD3 /* Models */,
@@ -282,13 +305,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				970F13D41EC820D900CAFC87 /* Restaurant.swift in Sources */,
 				979E33FC1EC5F43D00D66DD3 /* FavouritesViewController.swift in Sources */,
+				970F13D61EC8346600CAFC87 /* Menu.swift in Sources */,
 				97A898321EC1642200195136 /* DD.xcdatamodeld in Sources */,
 				979E33FE1EC5F70800D66DD3 /* FavouriteItemCell.swift in Sources */,
+				970F13D81EC83EDE00CAFC87 /* DoorDashAPIClient.swift in Sources */,
+				970F13D01EC81A4A00CAFC87 /* JSONDownloader.swift in Sources */,
 				979E33FA1EC5EFB000D66DD3 /* ResultsDetailViewController.swift in Sources */,
 				979E33D51EC2F9BD00D66DD3 /* SearchResultsDataSource.swift in Sources */,
 				979E33CD1EC2BA3E00D66DD3 /* SearchResultsTableViewController.swift in Sources */,
 				979E34001EC5F9B600D66DD3 /* FavouritesDataSource.swift in Sources */,
+				970F13D21EC81AFD00CAFC87 /* DoorDashError.swift in Sources */,
 				97A8982C1EC1642200195136 /* ViewController.swift in Sources */,
 				97A8982A1EC1642200195136 /* AppDelegate.swift in Sources */,
 				979E33D21EC2F62A00D66DD3 /* NearestAttractionCell.swift in Sources */,
