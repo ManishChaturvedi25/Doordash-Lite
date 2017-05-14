@@ -17,6 +17,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var locationManager = CLLocationManager()
     
+    // Keeping Apple Cupertine office as default lat lng
+    var lat:Double = 0.0
+    var lng:Double = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,10 +50,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let pin = MKPointAnnotation()
         pin.coordinate.latitude = userLocation.coordinate.latitude
         pin.coordinate.longitude = userLocation.coordinate.longitude
+        self.lat = userLocation.coordinate.latitude
+        self.lng = userLocation.coordinate.longitude
         pin.title = "Current Location"
         mapView.addAnnotation(pin)
 
     }
+    
+    
+    @IBAction func searchNearestRestaurant(_ sender: Any) {
+        
+        let apiClient = DoorDashAPIClient()
 
+        apiClient.searchForNearestResturants(withLat: self.lat, lng: self.lng) {resturants, error in
+        
+            
+            
+        }
+    
+
+    }
 }
 
