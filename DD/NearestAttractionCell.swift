@@ -18,6 +18,8 @@ class NearestAttractionCell: UITableViewCell {
 
     @IBOutlet weak var deliveryTypeLabel: UILabel!
     
+    @IBOutlet weak var asapLabel: UILabel!
+    
     static let reuseIdentified = "NearestAttraction"
 
     override func awakeFromNib() {

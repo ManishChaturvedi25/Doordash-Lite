@@ -12,6 +12,7 @@
 		970F13D41EC820D900CAFC87 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970F13D31EC820D900CAFC87 /* Restaurant.swift */; };
 		970F13D61EC8346600CAFC87 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970F13D51EC8346600CAFC87 /* Menu.swift */; };
 		970F13D81EC83EDE00CAFC87 /* DoorDashAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970F13D71EC83EDE00CAFC87 /* DoorDashAPIClient.swift */; };
+		970F13DC1ECABD4E00CAFC87 /* SearchResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970F13DB1ECABD4E00CAFC87 /* SearchResultsViewModel.swift */; };
 		979E33CD1EC2BA3E00D66DD3 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E33CC1EC2BA3E00D66DD3 /* SearchResultsTableViewController.swift */; };
 		979E33D21EC2F62A00D66DD3 /* NearestAttractionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E33D11EC2F62A00D66DD3 /* NearestAttractionCell.swift */; };
 		979E33D51EC2F9BD00D66DD3 /* SearchResultsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E33D41EC2F9BD00D66DD3 /* SearchResultsDataSource.swift */; };
@@ -45,6 +46,7 @@
 		970F13D31EC820D900CAFC87 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		970F13D51EC8346600CAFC87 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		970F13D71EC83EDE00CAFC87 /* DoorDashAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorDashAPIClient.swift; sourceTree = "<group>"; };
+		970F13DB1ECABD4E00CAFC87 /* SearchResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewModel.swift; sourceTree = "<group>"; };
 		979E33CC1EC2BA3E00D66DD3 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		979E33D11EC2F62A00D66DD3 /* NearestAttractionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearestAttractionCell.swift; sourceTree = "<group>"; };
 		979E33D41EC2F9BD00D66DD3 /* SearchResultsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsDataSource.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		979E33D01EC2F54F00D66DD3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				970F13DB1ECABD4E00CAFC87 /* SearchResultsViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				979E33D51EC2F9BD00D66DD3 /* SearchResultsDataSource.swift in Sources */,
 				979E33CD1EC2BA3E00D66DD3 /* SearchResultsTableViewController.swift in Sources */,
 				979E34001EC5F9B600D66DD3 /* FavouritesDataSource.swift in Sources */,
+				970F13DC1ECABD4E00CAFC87 /* SearchResultsViewModel.swift in Sources */,
 				970F13D21EC81AFD00CAFC87 /* DoorDashError.swift in Sources */,
 				97A8982C1EC1642200195136 /* ViewController.swift in Sources */,
 				97A8982A1EC1642200195136 /* AppDelegate.swift in Sources */,

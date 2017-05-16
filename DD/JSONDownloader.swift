@@ -19,7 +19,7 @@ class JSONDownloader {
         self.init(configuration: .default)
     }
     
-    typealias JSON = [AnyObject]
+    typealias JSON = [[String:Any]]
     typealias JSONTaskCompletionHandler = (JSON?, DoorDashError?) -> Void
     
     func jsonTask(with request: URLRequest, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
@@ -33,7 +33,7 @@ class JSONDownloader {
             if httpResponse.statusCode == 200 {
                 if let data = data {
                     do {
-                        let json = try JSONSerialization.jsonObject(with: data, options: []) as? [AnyObject]
+                        let json = try JSONSerialization.jsonObject(with: data, options: []) as? [[String:Any]]
                         completion(json, nil)
                     } catch {
                         completion(nil, .jsonConversionFailure)

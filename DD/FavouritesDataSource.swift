@@ -10,6 +10,8 @@ import UIKit
 
 class FavouritesDataSource: NSObject, UITableViewDataSource {
 
+    private var menuItems = [Menu] ()
+
     override init() {
         super.init()
     }

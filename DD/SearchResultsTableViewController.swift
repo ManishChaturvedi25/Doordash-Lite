@@ -12,6 +12,9 @@ class SearchResultsTableViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var lat: Double!
+    var lng: Double!
+    
     let searchController = UISearchController(searchResultsController: nil)
 
     let dataSource = SearchResultsDataSource()
@@ -26,11 +29,42 @@ class SearchResultsTableViewController: UIViewController, UITableViewDelegate {
          self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(SearchResultsTableViewController.dismissSearchResultController))
         
         tableView.tableHeaderView = searchController.searchBar
+        tableView.dataSource = dataSource
         
         searchController.searchResultsUpdater = self as? UISearchResultsUpdating
         
-        tableView.dataSource = dataSource
         
+        let apiClient = DoorDashAPIClient()
+
+        apiClient.searchForNearestResturants(withLat: ViewController.lat, lng: ViewController.lng) {resturants, error in
+            
+            if let dataSource = self.tableView.dataSource as? SearchResultsDataSource {
+                DispatchQueue.main.async {
+                    dataSource.updateDataSource(data: resturants)
+                    self.tableView.reloadData()
+                }
+            }
+            
+            
+        }
+
+       
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showMenu" {
+            if let selectedindexPath = tableView.indexPathForSelectedRow {
+                let selectedResturant = dataSource.resturant(indexPath: selectedindexPath)
+                
+                let resturantDetailController  = segue.destination as! ResultsDetailViewController
+                
+                resturantDetailController.resturant = selectedResturant
+                
+            }
+
+        }
     }
 
     override func didReceiveMemoryWarning() {

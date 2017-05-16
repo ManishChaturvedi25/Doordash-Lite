@@ -24,8 +24,13 @@ class DoorDashAPIClient {
                     return
                 }
             }
+            guard let actorsJSON = json else {
+                return
+            }
             
+            let resturant = actorsJSON.flatMap{ Restaurant(json: $0)}
             
+            completionHandler(resturant, error)
         }
         
         task.resume()

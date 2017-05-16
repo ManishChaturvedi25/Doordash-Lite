@@ -13,4 +13,5 @@ enum DoorDashError:Error {
     case jsonConversionFailure
     case invalidData
     case responseUnsuccessful
+    case jsonParsingFaliure(errorMessage:String)
 }

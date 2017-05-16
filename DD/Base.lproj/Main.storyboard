@@ -33,8 +33,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="searchNearestRestaurant:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ggV-pm-ul7"/>
-                                    <segue destination="ATV-n5-3Zd" kind="presentation" id="1vL-NX-QbR"/>
+                                    <segue destination="ATV-n5-3Zd" kind="presentation" identifier="showResturants" id="1vL-NX-QbR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -133,11 +132,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="asapLabel" destination="LGc-Dk-yHY" id="AD6-E9-eGB"/>
                                             <outlet property="deliveryTypeLabel" destination="Z4n-hN-xXX" id="yUD-VO-3BF"/>
                                             <outlet property="specialityLabel" destination="HCu-fV-Rnd" id="em0-N8-y5P"/>
                                             <outlet property="storeImageView" destination="DfB-eU-BZ1" id="xG3-do-Kze"/>
                                             <outlet property="storeNameLabel" destination="Awh-mx-02a" id="aBK-gz-E8S"/>
-                                            <segue destination="QZc-41-hAw" kind="show" id="bwh-Ti-GQa"/>
+                                            <segue destination="QZc-41-hAw" kind="show" identifier="showMenu" id="bwh-Ti-GQa"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

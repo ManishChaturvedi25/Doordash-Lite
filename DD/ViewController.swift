@@ -16,10 +16,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
     var locationManager = CLLocationManager()
-    
+        
     // Keeping Apple Cupertine office as default lat lng
-    var lat:Double = 0.0
-    var lng:Double = 0.0
+    static var lat:Double = 0.0
+    static var lng:Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,25 +50,29 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let pin = MKPointAnnotation()
         pin.coordinate.latitude = userLocation.coordinate.latitude
         pin.coordinate.longitude = userLocation.coordinate.longitude
-        self.lat = userLocation.coordinate.latitude
-        self.lng = userLocation.coordinate.longitude
+        ViewController.lat = userLocation.coordinate.latitude
+        ViewController.lng = userLocation.coordinate.longitude
         pin.title = "Current Location"
         mapView.addAnnotation(pin)
 
     }
-    
-    
-    @IBAction func searchNearestRestaurant(_ sender: Any) {
-        
-        let apiClient = DoorDashAPIClient()
 
-        apiClient.searchForNearestResturants(withLat: self.lat, lng: self.lng) {resturants, error in
-        
-            
-            
-        }
+    //TODO: Pass on the lat/lng to SearchViewController via segue
     
-
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier ==  "showResturants" {
+//            
+//            let tabBarController = segue.destination as! UITabBarController
+//
+//            if  let albumListController  =  tabBarController.selectedViewController as? SearchResultsTableViewController {
+//
+//                albumListController.lat = self.lat
+//                albumListController.lng = self.lng
+//                
+//            }
+//            
+//        }
+//    }
+    
 }
 

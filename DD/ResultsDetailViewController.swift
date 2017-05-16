@@ -11,11 +11,17 @@ import UIKit
 class ResultsDetailViewController: UITableViewController {
 
 
+    var menu: Menu!
+    var resturant: Restaurant!
+    
     @IBOutlet weak var storeImageView: UIImageView!
     
     @IBOutlet weak var arrivalDetailsLabel: UILabel!
     
     @IBOutlet weak var favouriteButton: UIButton!
+    
+    let dataSource = FavouritesDataSource()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +31,14 @@ class ResultsDetailViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.arrivalDetailsLabel.text = resturant.description
+
+
     }
 
     override func didReceiveMemoryWarning() {
